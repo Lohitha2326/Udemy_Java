@@ -12,6 +12,14 @@ class Mobile
         System.out.println(brand+": "+cost +": "+name);
     }
 
+//If the method is static we cannot access non-static variables inside static method.To access we use object refrence.
+    public static void show1(Mobile obj)
+    {
+        System.out.println(obj.brand+": "+obj.cost +": "+name);
+    }
+
+}
+
 }
 
 
@@ -38,6 +46,7 @@ public class StaticVariables
     obj1.show();
     obj2.show();
 
+Mobile.show1(obj1);
 
 
    }
