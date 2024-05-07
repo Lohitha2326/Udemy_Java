@@ -11,12 +11,28 @@ class Mobile
         //variables inside method are local variables
         System.out.println(brand+": "+cost +": "+name);
     }
-
+//Static Methods
 //If the method is static we cannot access non-static variables inside static method.To access we use object refrence.
     public static void show1(Mobile obj)
     {
         System.out.println(obj.brand+": "+obj.cost +": "+name);
     }
+
+  public Mobile()
+    {
+        System.out.println("Constructor block");
+    }
+
+
+    /*Static Block
+     * The static block will be called first and then constructor block 
+     * because class loader will load the calss first and then creates the instantiation of the object
+     * If we eant to call only static block we will use Class.forName("Mobile")
+     */
+    static{
+        System.out.println("Static block");
+    }
+
 
 }
 
@@ -27,6 +43,10 @@ public class StaticVariables
 {
     public static void main(String[] args)
    {
+
+//Class.forName("Mobile"); used to call static block
+
+
     Mobile obj1=new Mobile();
     Mobile obj2=new Mobile();
     obj1.brand="Apple";
