@@ -1,0 +1,50 @@
+class Human{
+    /*
+     * If we make these varaiables private then we cannot access them outside of the class
+     * So we bind data with methods called as Encapsulation
+     */
+
+   // int age=11;
+   // String name="Lohitha";
+
+    private int age;
+    private String name;
+/*Getters and setters method */
+public void setAge(int a)
+{
+     age=a;
+}
+    public int getAge()
+    {
+        return age;
+    }
+
+    public void setName(String n)
+    {
+        name=n;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+}
+
+public class Encapsulation {
+    public static void main(String[] args)
+    {
+        Human obj=new Human();
+        /*When we use setters and getters we call set and get methods to access the varibales */
+        obj.setAge(10);
+        obj.setName("Repala");
+        System.out.println(obj.getAge()+" "+obj.getName());
+
+
+        //System.out.println(obj.age+" "+obj.name);
+
+
+
+    }
+    
+}
