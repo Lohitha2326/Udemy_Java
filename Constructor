@@ -1,0 +1,57 @@
+/*Constructor
+ * It is method where it is same as class name
+ * It is called when object is created
+ */
+class Human
+{
+    private int age;
+    private String name;
+
+    /*Default Constructor 
+     * 
+     * Even if we didnot have constructor when the object is created the constructor
+     * by default.So it is called as Default Constructor
+    */
+    public Human()   
+    {
+        age=12;
+        name="Lohitha";
+    }
+
+    /*Parameterized Constructor */
+
+    public Human(int a,String n)
+    {
+        age=a;
+        name=n;
+    }
+    
+    
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
+}
+
+public class Constructor {
+    public static void main(String[] args)
+    {
+        Human obj=new Human();
+        Human obj1=new Human(10,"Repala");
+        
+        System.out.println(obj.getAge()+" "+obj.getName());
+        System.out.println(obj1.getAge()+" "+obj1.getName());
+
+    }
+    
+}
