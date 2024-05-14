@@ -1,0 +1,49 @@
+/*Parent or super or base class */
+class Calc
+{
+    public int add(int a,int b)
+    {
+        return a+b;
+    }
+
+    public int sub(int c,int d)
+    {
+        return c-d;
+    }
+}
+
+/*Child or sub or Derived class 
+ * 
+ * If we want features of Calc in AdvCalc we should write both add and sub methods again
+ *  which is called Redundancy.Instead of that we can extend Calc method(inheriting the properties)
+*/
+class AdvCalc extends Calc
+{
+    public int multi(int p,int q)
+    {
+        return p*q;
+    }
+
+    public int div(int r,int s)
+    {
+        return r/s;
+    }
+}
+
+public class Inheritance {
+    public static void main(String[] args)
+    {
+        //If we want to access add and sub methods we cannot do it without inheriting
+        AdvCalc obj=new AdvCalc();
+        int r1=obj.add(2,4);
+        int r2=obj.sub(9,7);
+        int r3=obj.multi(4,3);
+        int r4=obj.div(8,2);
+
+        System.out.println(r1+" "+r2+" "+r3+" "+r4);
+
+
+
+    }
+    
+}
