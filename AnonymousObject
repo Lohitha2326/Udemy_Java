@@ -1,0 +1,32 @@
+/*Anonymous objects are the objects without refernce
+ * These objects cannot be reused
+ */
+
+class Obj
+{
+    public Obj()
+    {
+        System.out.println("Object created");
+    }
+    public void show()
+    {
+        System.out.println("Show method");
+
+    }
+
+}
+
+public class AnonymousObject
+{
+    public static void main(String[] args)
+    {
+        /*Referenced Objects */
+        Obj obj=new Obj(); 
+        obj.show();
+
+        /*Anonymous Object--- new Obj(); */
+        new Obj().show(); 
+        new Obj().show();  //If we use it again the object will also be created again
+
+    }
+}
