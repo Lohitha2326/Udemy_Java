@@ -1,0 +1,41 @@
+/*Dynamic Method Dispatch
+ * When we have same method in both classes then it overrides and prints method in sub class
+ * But when we create object for all the classes then we get both methods.
+ * This process is called Dynamic Method Dispatch which is run time polymorphism ie output is known 
+ * after it is runned.
+ * 
+ * A obj=new B(); Here A is type and new B() is object creation
+ * Object creation doesnot depend on type.So it creates object for B only
+ */
+
+
+ class A
+ {
+    public void show()
+    {
+        System.out.println("In A method");
+    }
+
+ }
+
+ class B extends A
+ {
+    public void show()
+    {
+        System.out.println("In B method");
+    }
+
+ }
+public class DynamicMethodDispatch {
+    public static void main()
+    {
+        //A obj=new B(); creates object for only B
+        A obj=new A();
+        obj.show();
+
+        obj=new B();
+        obj.show();
+
+    }
+    
+}
