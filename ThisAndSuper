@@ -1,0 +1,55 @@
+/*This and super keyword
+ * This keyword calls the constructor of the same class
+ * Super keyword calls the constructor of super class
+ * By default every constructor will have super() keyword if it is either specified or not
+ * 
+ * 
+ * If we want call parameterized constructor of b we will pass value in the object creation
+ * But if we want to call parameterized constructor of A then we use super(n) in B constructor
+ * 
+ * If we want the output as In A,In B,In B int then we use this() as it calls constructor of same class
+ * 
+ * 
+ * the super() in A class calls the object class.By default every class will extend Oject class
+ */
+
+
+ class A
+ {
+    public A()
+    {
+        super();
+        System.out.println("In A");
+    }
+
+    public A(int n)
+    {
+        super();
+        System.out.println("In A int");
+    }
+
+ }
+ class B extends A
+ {
+    public B()
+    {
+        super();
+        System.out.println("In B");
+    }
+
+    public B(int n)
+    {
+        //super(n);
+        this();
+        System.out.println("In B int");
+    }
+
+ }
+public class ThisAndSuper
+{
+    public static void main(String[] args)
+    {
+        B obj=new B(5);
+
+    }
+}
