@@ -1,0 +1,39 @@
+package Collections;
+/*Abstract keyword 
+ * 
+ * Abstract class can contain both non-abstract methods and abstract methods.
+ * If we dont want to implement any method then we can keep it as abstract.
+ * If any of the methods are abstract then class should also be abstract.
+ * If we extend the abstrct class then we should implement all the abstrct methods in the extended class.
+ * Abstract class cannot create object.
+*/
+
+abstract class Car
+{
+    abstract public void drive();
+    public void playMusic()
+    {
+        System.out.println("Music");
+    }
+}
+
+class WagonR extends Car
+{
+    public void drive()
+    {
+        System.out.println("driving");
+    }
+
+}
+public class Abstract {
+    public static void main(String[] args)
+    {
+
+
+ Car obj=new WagonR();
+    obj.drive();
+    obj.playMusic();
+
+    }
+    
+}
