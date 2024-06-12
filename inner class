@@ -1,0 +1,43 @@
+/*Inner class
+ * Class within the class
+ * We can create inner clases but while creating the objects for inner classes
+ * we have to use the object of outer class i.e
+ * A.B obj1=obj.new B(); where obj is the object of outer class A
+ * 
+ * If the inner class is static then we can use it as
+ * A.B obj1=new A.B();
+ * 
+ */
+class A
+{
+    int age;
+    public void show()
+    {
+        System.out.println("Outer class method");
+    }
+    class B{
+
+        public void innerClass()
+        {
+            System.out.println("Inner class method");
+        }
+
+    
+    }
+
+}
+public class InnerClass {
+    public static void main(String[] args)
+    {
+        A obj=new A();
+        obj.show();
+
+        //A.B obj1= new A.B(); WE can it if inner class is static
+        A.B obj1= obj.new B();
+        obj1.innerClass();
+
+
+
+    }
+    
+}
