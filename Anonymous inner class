@@ -1,0 +1,44 @@
+package Collections;
+/*Anonymous inner class
+         * 
+         * creating the inner class without the name and for which only a single object is created
+         * 
+         * We can also create anonymous inner class for abstract methods
+         */
+class A 
+{
+    public void show()
+    {
+        System.out.println("In A class");
+    }
+}
+
+/*Abstract class--can implement using anonymous inner class */
+abstract class B 
+{
+   abstract public void run();
+}
+
+public class AnonymousInnerClass {
+    public static void main(String[] args)
+    {
+        A obj = new A(){
+        public void show()
+        {
+            System.out.println("In new class");
+        }
+        };
+
+        B obj1=new B()
+            {
+                public void run()
+                {
+                    System.out.println("In run new method");
+                }
+            };
+
+        obj.show();
+        obj1.run();
+    }
+    
+}
