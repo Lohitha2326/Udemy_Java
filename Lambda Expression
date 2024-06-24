@@ -1,3 +1,6 @@
+/*Lambda Expression only runs using Functional Interface*/
+
+
 @FunctionalInterface
 interface A
 {
