@@ -1,0 +1,25 @@
+
+/*throw keyword
+ * Throw keyword is used to throw the exception.
+ * If the statement of catch block is not printing when there is no exception
+ * but if we want to print catch block we use throw keyword
+ */
+public class Exceptions {
+    public static void main(String[] args)
+    {
+        int i=0;
+        int j;
+        try{
+            j=18/i;
+
+            if(i==0)
+            throw new ArithmeticException("I is divided by zero");
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("Arithmetic Exception");
+        }
+    }
+    
+}
