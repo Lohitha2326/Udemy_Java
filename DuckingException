@@ -1,0 +1,36 @@
+class A 
+{
+    public void show() throws ClassNotFoundException
+    {
+        /* As the class method is not handling exception the main method is handling it
+    try
+    {
+    Class.forName("DuckingException");
+    }
+    catch(Exception e)
+    {
+        System.out.println("Class Not found"+e);
+    }
+        */
+
+        Class.forName("DuckingException");
+    }
+
+}
+public class DuckingException {
+static{
+    System.out.println("Class");
+}
+
+    public static void main(String[] args)
+    {
+        A obj=new A();
+        try {
+            obj.show();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+       
+    }
+    
+}
