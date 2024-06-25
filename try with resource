@@ -1,3 +1,9 @@
+/*try with resource
+Finally block is used to close the resource
+When we directly use buffered reader in try then no need to close the resource.
+*/
+
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
