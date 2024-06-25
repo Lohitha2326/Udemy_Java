@@ -1,0 +1,21 @@
+/*To read input from users we have 2 methods:
+1.Buffered Reader
+2.Scanner
+*/
+
+
+public class A
+{
+public static void main(String[] args)
+{
+InputStreamReader in=new InputStreamReader(System.in);
+BufferedReader bf=new BufferedReader(in);
+int num=Integer.parseInt(bf.readLine()); //readLine() takes string values so we need to convert into int we use Integer.parseInt();
+System.out.println(num);
+bf.close(); //As buffered reader is resource we need to close it.
+
+//Scanner sc=new Scanner(System.in);
+//int num=sc.nextInt();
+//System.out.println(num);
+}
+}
